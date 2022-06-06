@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import CardList from './components/card-list/CardList'
+import SearchBox from './components/search-box/SearchBox'
 
 function App() {
   const [data, setData] = useState([]);
@@ -25,14 +27,8 @@ function App() {
 
   return (
     <div className="App">
-      <input type="search" placeholder="Enter name:" onChange={search} />
-      {filtered.map((item) => {
-        return (
-          <div key={item.id}>
-            <h3>{item.name}</h3>
-          </div>
-        );
-      })}
+      <SearchBox placeholder="Enter name..." onSearch={search} />
+      <CardList filtered={filtered} />
     </div>
   );
 }
