@@ -36,8 +36,8 @@ function App() {
   return (
     <div className="App">
       <h1 className="app-title">User's Rolodex</h1>
-      <SearchBox placeholder="Enter name..." type="search" onSearch={search} />
-      <SearchBox placeholder="Number of users" type="number" onSearch={setUsers} />
+      <SearchBox placeholder="Filter by name..." type="search" onSearch={search} />
+      <SearchBox placeholder="Number of displayed users" type="number" onSearch={setUsers} />
       <CardList filtered={filtered} />
     </div>
   );
