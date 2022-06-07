@@ -15,3 +15,10 @@
 .card-container:hover {
   transform: scale(1.05);
 }
+
+.card-container img {
+  width: 100%;
+}
+.emailS {
+  font-size: 70%;
+}

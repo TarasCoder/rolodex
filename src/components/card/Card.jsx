@@ -1,13 +1,13 @@
 import React from "react";
-import "./Card.css"
+import "./Card.css";
 
-function Card({item}) {
+function Card(props) {
   return (
-      <div className="card-container">
-        <img src="#" alt="avatar" />
-        <h2>{item.name}</h2>
-        <h2>email</h2>
-      </div>
+    <div className="card-container">
+      <img src={props.item.picture.large} alt="avatar" />
+      <h2>{props.item.name.first + " " + props.item.name.last}</h2>
+      <h6 className="emailS">{props.item.email}</h6>
+    </div>
   );
 }
 

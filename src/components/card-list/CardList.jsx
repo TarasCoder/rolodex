@@ -5,9 +5,9 @@ import Card from "../card/Card";
 function CardList({ filtered }) {
   return (
     <div className="card-list">
-      {filtered.map((item) => {
+      {filtered.map((item, index) => {
         return (
-          <Card key={item.id} item={item} />
+          <Card key={index} item={item} />
         );
       })}
     </div>
