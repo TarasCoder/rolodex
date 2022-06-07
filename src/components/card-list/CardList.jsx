@@ -1,18 +1,13 @@
 import React from "react";
 import "./CardList.css";
+import Card from "../card/Card";
 
 function CardList({ filtered }) {
   return (
     <div className="card-list">
       {filtered.map((item) => {
         return (
-          <div key={item.id}>
-            <div className="card-container">
-              <img src="#" alt="avatar" />
-              <h2>{item.name}</h2>
-              <h2>email</h2>
-            </div>
-          </div>
+          <Card key={item.id} item={item} />
         );
       })}
     </div>

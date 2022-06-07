@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="app-title">Rolodex</h1>
       <SearchBox placeholder="Enter name..." onSearch={search} />
       <CardList filtered={filtered} />
     </div>
